@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角搜索框</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* 设置整个页面背景为白色 */
+        }
+
+        .search-box {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #f0f0f0;
+            border-radius: 20px;
+            background: linear-gradient(#f0f0f0, #f0f0f0); /* 初始搜索框背景颜色是浅灰色 */
+            transition: background 0.3s, border-color 0.3s; /* 添加颜色渐变效果 */
+        }
+
+        .search-box:hover {
+            background: linear-gradient(#ffffff, #ffffff); /* 鼠标悬停时搜索框背景颜色渐变为白色 */
+            border-color: #3498db; /* 鼠标悬停时边缘线颜色为淡蓝色 */
+        }
+
+        .search-box:focus-within {
+            outline: none;
+        }
+
+        .search-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: linear-gradient(#f0f0f0, #f0f0f0); /* 设置搜索文本框背景颜色为浅灰色 */
+        }
+
+        .search-box:hover .search-input {
+            background: linear-gradient(#ffffff, #ffffff); /* 鼠标悬停时搜索文本框背景颜色渐变为白色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="少女祈祷中...">
+    </div>
+</body>
+</html>
